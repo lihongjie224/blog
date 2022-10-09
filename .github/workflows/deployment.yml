@@ -24,11 +24,9 @@ jobs:
 
     - name: Install dependencies & Generate static files
       run: |
-        node -v
         npm i -g hexo-cli
         npm i
-        hexo clean
-        hexo g
+        hexo clean && hexo generate
     - name: Deploy to Github Pages
       env:
         GIT_NAME: lihongjie224
